@@ -95,7 +95,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-// Observer pour Hero et toutes les cartes
 document.querySelectorAll('.hero-container, .contact-card, .experience-card, .collaboration-card').forEach(el => {
   observer.observe(el);
 });
