@@ -15,6 +15,7 @@ import pauLogo from './assets/pau.jpg';
 import woxyLogo from './assets/wozy.jpg';
 import toryzenLogo from './assets/toryzen.jpg';
 import zukiLogo from './assets/zuki.jpg';
+import './style.css';
 
 const app = document.querySelector("#app");
 
