@@ -5,7 +5,7 @@ app.innerHTML = `
   <h1>Coach Yushin</h1>
   <nav>
     <a href="#hero">Accueil</a>
-    <a href="#reseaux">Réseaux</a>
+    <a href="#contact">Contact</a>
     <a href="#experience">Expérience</a>
     <a href="#collaboration">Collaborations</a>
   </nav>
@@ -20,12 +20,26 @@ app.innerHTML = `
   </div>
 </section>
 
-<section id="reseaux">
-  <ul>
-    <li><a href="https://twitter.com/coach" target="_blank">Twitter</a></li>
-    <li><a href="https://twitch.tv/coach" target="_blank">Twitch</a></li>
-    <li><a href="https://discord.gg/coach" target="_blank">Discord</a></li>
-  </ul>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <!-- Carte X (Twitter) -->
+    <div class="contact-card">
+      <a href="https://x.com/coachyushin" target="_blank">
+        <img src="/X.png" alt="Twitter X" class="contact-logo">
+      </a>
+      <p>X (Twitter)</p>
+    </div>
+
+    <!-- Carte MZ (Manager) -->
+    <div class="contact-card">
+      <a href="https://x.com/MZ_AGENCY" target="_blank">
+        <img src="/MZ.png" alt="Manager MZ" class="contact-logo">
+      </a>
+      <p>Mon manager</p>
+    </div>
+  </div>
 </section>
 
 <section id="experience">
