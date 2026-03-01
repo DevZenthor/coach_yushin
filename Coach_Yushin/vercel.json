@@ -4,10 +4,8 @@
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    // Les fichiers JS/CSS/images sont servis normalement
     { "src": "/(.*\\.(js|css|png|jpg|gif|svg))", "dest": "/$1" },
 
-    // Tout le reste redirigé vers index.html
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
