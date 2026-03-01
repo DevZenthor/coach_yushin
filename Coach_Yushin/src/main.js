@@ -59,22 +59,22 @@ app.innerHTML = `
 <section id="experience">
   <h2>Expérience</h2>
   <div class="experience-container">
-    <a href="#" class="experience-card">
+    <a href="https://x.com/Koyaesport_" class="experience-card">
       <img src="${koyaLogo}">
       <p>Koya Esport</p>
     </a>
 
-    <a href="#" class="experience-card">
+    <a href="https://x.com/Kaionewin1" class="experience-card">
       <img src="${kaioneLogo}">
       <p>Kaione</p>
     </a>
 
-    <a href="#" class="experience-card">
+    <a href="https://x.com/NBL_gg" class="experience-card">
       <img src="${nebulaLogo}">
       <p>Nebula</p>
     </a>
 
-    <a href="#" class="experience-card">
+    <a href="https://x.com/LynoXEU" class="experience-card">
       <img src="${lynoxLogo}">
       <p>Lynox</p>
     </a>
@@ -84,22 +84,22 @@ app.innerHTML = `
 <section id="collaboration">
   <h2>Collaborations</h2>
   <div class="collaboration-container">
-    <a href="#" class="collaboration-card">
+    <a href="https://x.com/pauuiwnl" class="collaboration-card">
       <img src="${pauLogo}">
       <p>Pau</p>
     </a>
 
-    <a href="#" class="collaboration-card">
+    <a href="https://x.com/woxy1z" class="collaboration-card">
       <img src="${woxyLogo}">
       <p>Woxy</p>
     </a>
 
-    <a href="#" class="collaboration-card">
+    <a href="https://x.com/toryzenfv" class="collaboration-card">
       <img src="${toryzenLogo}">
       <p>Toryzen</p>
     </a>
 
-    <a href="#" class="collaboration-card">
+    <a href="https://x.com/VZuki_1" class="collaboration-card">
       <img src="${zukiLogo}">
       <p>Zuki</p>
     </a>
