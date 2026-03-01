@@ -11,7 +11,6 @@ app.innerHTML = `
   </nav>
 </header>
 
-<!-- HERO / Présentation -->
 <section id="hero">
   <div class="hero-container">
     <img src="/yushin.jpg" alt="Coach Yushin" class="avatar">
@@ -20,7 +19,6 @@ app.innerHTML = `
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <div class="contact-container">
@@ -35,7 +33,6 @@ app.innerHTML = `
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Expérience</h2>
   <div class="experience-container">
@@ -58,23 +55,33 @@ app.innerHTML = `
   </div>
 </section>
 
-<!-- COLLABORATION -->
 <section id="collaboration">
   <h2>Collaborations actuelles</h2>
-  <ul>
-    <li>Equipe Esport XYZ</li>
-    <li>Créateurs Fortnite</li>
-    <li>Tournois privés</li>
-  </ul>
+  <div class="collaboration-container">
+    <a href="https://x.com/pauuiwnl" target="_blank" class="collaboration-card">
+      <img src="/pau.jpg" alt="Joueur 1" class="collaboration-logo">
+      <p>Pau</p>
+    </a>
+    <a href="https://x.com/woxy1z" target="_blank" class="collaboration-card">
+      <img src="/wozy.jpg" alt="Joueur 2" class="collaboration-logo">
+      <p>Woxy</p>
+    </a>
+    <a href="https://x.com/toryzenfv" target="_blank" class="collaboration-card">
+      <img src="/toryzen.jpg" alt="Joueur 3" class="collaboration-logo">
+      <p>Toryzen</p>
+    </a>
+    <a href="https://x.com/VZuki_1" target="_blank" class="collaboration-card">
+      <img src="/zuki.jpg" alt="Joueur 4" class="collaboration-logo">
+      <p>Zuki</p>
+    </a>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>Coach Yushin</p>
   <p>
-    <a href="https://twitter.com/coach" target="_blank">Twitter</a> |
-    <a href="https://twitch.tv/coach" target="_blank">Twitch</a> |
-    <a href="https://discord.gg/coach" target="_blank">Discord</a>
+    <a href="https://x.com/coachyushin" target="_blank">Twitter</a> |
+    <a href="https://x.com/MZ_AGENCY" target="_blank">Manager</a> 
   </p>
 </footer>
 `;
@@ -88,6 +95,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-document.querySelectorAll('.hero-container, .contact-card, .experience-card').forEach(el => {
+// Observer pour Hero et toutes les cartes (Contact, Experience, Collaboration)
+document.querySelectorAll('.hero-container, .contact-card, .experience-card, .collaboration-card').forEach(el => {
   observer.observe(el);
 });

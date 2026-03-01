@@ -11,7 +11,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 
-  cursor: default;
+  cursor: default; /* curseur normal par défaut */
+  user-select: none; /* pas de sélection du texte */
 }
 
 body::before {
@@ -22,39 +23,51 @@ body::before {
   z-index: -1;
 }
 
-/* ===== Header ===== */
+/* ===== Header / Navbar modernisée ===== */
 header {
   position: fixed;
   top: 0;
   width: 95%;
-  background: rgba(0,0,0,0.6);
-  padding: 20px 40px;
+  background: rgba(0,0,0,0.7);
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #39ff14;
   z-index: 10;
+  border-radius: 0 0 15px 15px;
 }
 
 header h1 {
   color: #39ff14;
   font-size: 2rem;
   margin: 0;
+  font-weight: bold;
+  cursor: default;
 }
 
 nav {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 nav a {
   color: #39ff14;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: auto;
 }
 
 nav a:hover {
   color: white;
+  background-color: rgba(57,255,20,0.2);
+  border: 1px solid #39ff14;
 }
 
 /* ===== Hero ===== */
@@ -75,22 +88,19 @@ nav a:hover {
   border: 5px solid #39ff14;
   object-fit: cover;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
-#hero h2 {
-  font-size: 3rem;
-  margin: 0;
-}
-
+#hero h2,
 .description {
-  font-size: 1.8rem;
-  color: #39ff14;
-  margin-top: 10px;
+  cursor: default;
+  user-select: none;
 }
 
 /* ===== Sections avec cartes ===== */
 .contact-container,
-.experience-container {
+.experience-container,
+.collaboration-container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -98,6 +108,7 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
+/* ===== Contact et Experience cards ===== */
 .contact-card,
 .experience-card {
   display: flex;
@@ -110,10 +121,10 @@ nav a:hover {
   border-radius: 12px;
   text-decoration: none;
   background-color: rgba(0,0,0,0.3);
-  cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
+  cursor: pointer; /* cliquable */
 }
 
 .contact-card img,
@@ -122,6 +133,7 @@ nav a:hover {
   height: 80px;
   object-fit: contain;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-card p,
@@ -131,6 +143,7 @@ nav a:hover {
   color: #39ff14;
   text-align: center;
   cursor: default;
+  user-select: none;
 }
 
 .contact-card:hover,
@@ -148,12 +161,61 @@ nav a:hover {
   color: white;
 }
 
-/* ===== Animation visible ===== */
+/* ===== Collaborations style néon sur tout le cadre ===== */
+.collaboration-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #39ff14;
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  cursor: default;
+  
+  /* glow néon sur tout le cadre */
+  box-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 24px #39ff14, 0 0 36px #39ff14;
+}
+
+.collaboration-card:hover {
+  transform: translateY(-5px); /* léger levé au hover */
+  box-shadow: 0 0 12px #39ff14, 0 0 24px #39ff14, 0 0 36px #39ff14, 0 0 48px #39ff14;
+}
+
+.collaboration-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.collaboration-card img:hover {
+  transform: scale(1.1);
+}
+
+.collaboration-card p {
+  color: #39ff14;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+
+/* ===== Animation fade + slide ===== */
 .hero-container.visible,
 .contact-card.visible,
-.experience-card.visible {
+.experience-card.visible,
+.collaboration-card.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: all 0.6s ease-out;
 }
 
 /* ===== Section Titles ===== */
@@ -162,23 +224,8 @@ section h2 {
   margin-bottom: 30px;
   text-align: center;
   font-size: 2.2rem;
-}
-
-/* ===== Collaboration ===== */
-#collaboration {
-  padding: 60px 20px;
-}
-
-#collaboration ul {
-  list-style: none;
-  padding: 0;
-  color: white;
-  text-align: center;
-}
-
-#collaboration li {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+  cursor: default;
+  user-select: none;
 }
 
 /* ===== Footer ===== */
@@ -192,10 +239,17 @@ footer a {
   color: #39ff14;
   text-decoration: none;
   margin: 0 5px;
+  cursor: pointer;
+  user-select: auto;
 }
 
 footer a:hover {
   color: white;
+}
+
+footer p {
+  cursor: default;
+  user-select: none;
 }
 
 /* ===== Scroll Margin pour header fixe ===== */
@@ -212,18 +266,21 @@ section {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .contact-container,
-  .experience-container {
+  .experience-container,
+  .collaboration-container {
     gap: 20px;
   }
 
   .contact-card,
-  .experience-card {
+  .experience-card,
+  .collaboration-card {
     width: 120px;
     height: 120px;
   }
 
   .contact-card img,
-  .experience-card img {
+  .experience-card img,
+  .collaboration-card img {
     width: 60px;
     height: 60px;
   }
