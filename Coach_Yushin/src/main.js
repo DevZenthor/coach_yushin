@@ -1,3 +1,21 @@
+// ===== Import images depuis assets =====
+import avatar from './assets/yushin.jpg';
+import background from './assets/background.gif';
+import twitterLogo from './assets/X.png';
+import managerLogo from './assets/MZ.png';
+
+// Experience logos
+import koyaLogo from './assets/KOYA.png';
+import kaioneLogo from './assets/KAIONE.png';
+import nebulaLogo from './assets/NEBULA.png';
+import lynoxLogo from './assets/LYNOX.png';
+
+// Collaboration logos
+import pauLogo from './assets/pau.jpg';
+import woxyLogo from './assets/wozy.jpg';
+import toryzenLogo from './assets/toryzen.jpg';
+import zukiLogo from './assets/zuki.jpg';
+
 const app = document.querySelector("#app");
 
 app.innerHTML = `
@@ -13,7 +31,7 @@ app.innerHTML = `
 
 <section id="hero">
   <div class="hero-container">
-    <img src="/yushin.jpg" alt="Coach Yushin" class="avatar">
+    <img src="${avatar}" alt="Coach Yushin" class="avatar">
     <h2>Coach Yushin</h2>
     <p class="description">Fortnite Coach</p>
   </div>
@@ -23,11 +41,11 @@ app.innerHTML = `
   <h2>Contact</h2>
   <div class="contact-container">
     <a href="https://x.com/coachyushin" target="_blank" class="contact-card">
-      <img src="/X.png" alt="Twitter X" class="contact-logo">
+      <img src="${twitterLogo}" alt="Twitter X" class="contact-logo">
       <p>X (Twitter)</p>
     </a>
     <a href="https://x.com/MZ_AGENCY" target="_blank" class="contact-card">
-      <img src="/MZ.png" alt="Manager MZ" class="contact-logo">
+      <img src="${managerLogo}" alt="Manager MZ" class="contact-logo">
       <p>Mon manager</p>
     </a>
   </div>
@@ -37,19 +55,19 @@ app.innerHTML = `
   <h2>Expérience</h2>
   <div class="experience-container">
     <a href="https://x.com/Koyaesport_" target="_blank" class="experience-card">
-      <img src="/KOYA.png" alt="Team 1" class="experience-logo">
+      <img src="${koyaLogo}" alt="Koya Esport" class="experience-logo">
       <p>Koya Esport</p>
     </a>
     <a href="https://x.com/Kaionewin1" target="_blank" class="experience-card">
-      <img src="/KAIONE.png" alt="Team 2" class="experience-logo">
+      <img src="${kaioneLogo}" alt="Kaione" class="experience-logo">
       <p>Kaione</p>
     </a>
     <a href="https://x.com/NBL_gg" target="_blank" class="experience-card">
-      <img src="/NEBULA.png" alt="Team 3" class="experience-logo">
+      <img src="${nebulaLogo}" alt="Nebula" class="experience-logo">
       <p>Nebula</p>
     </a>
     <a href="https://x.com/LynoXEU" target="_blank" class="experience-card">
-      <img src="/LYNOX.png" alt="Team 4" class="experience-logo">
+      <img src="${lynoxLogo}" alt="Lynox Esport" class="experience-logo">
       <p>Lynox Esport</p>
     </a>
   </div>
@@ -59,19 +77,19 @@ app.innerHTML = `
   <h2>Collaborations actuelles</h2>
   <div class="collaboration-container">
     <a href="https://x.com/pauuiwnl" target="_blank" class="collaboration-card">
-      <img src="/pau.jpg" alt="Joueur 1" class="collaboration-logo">
+      <img src="${pauLogo}" alt="Pau" class="collaboration-logo">
       <p>Pau</p>
     </a>
     <a href="https://x.com/woxy1z" target="_blank" class="collaboration-card">
-      <img src="/wozy.jpg" alt="Joueur 2" class="collaboration-logo">
+      <img src="${woxyLogo}" alt="Woxy" class="collaboration-logo">
       <p>Woxy</p>
     </a>
     <a href="https://x.com/toryzenfv" target="_blank" class="collaboration-card">
-      <img src="/toryzen.jpg" alt="Joueur 3" class="collaboration-logo">
+      <img src="${toryzenLogo}" alt="Toryzen" class="collaboration-logo">
       <p>Toryzen</p>
     </a>
     <a href="https://x.com/VZuki_1" target="_blank" class="collaboration-card">
-      <img src="/zuki.jpg" alt="Joueur 4" class="collaboration-logo">
+      <img src="${zukiLogo}" alt="Zuki" class="collaboration-logo">
       <p>Zuki</p>
     </a>
   </div>
