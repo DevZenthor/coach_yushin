@@ -24,34 +24,41 @@ app.innerHTML = `
 <section id="contact">
   <h2>Contact</h2>
   <div class="contact-container">
-    <!-- Carte X (Twitter) -->
-    <div class="contact-card">
-      <a href="https://x.com/coachyushin" target="_blank">
-        <img src="/X.png" alt="Twitter X" class="contact-logo">
-      </a>
+    <a href="https://x.com/coachyushin" target="_blank" class="contact-card">
+      <img src="/X.png" alt="Twitter X" class="contact-logo">
       <p>X (Twitter)</p>
-    </div>
-
-    <!-- Carte MZ (Manager) -->
-    <div class="contact-card">
-      <a href="https://x.com/MZ_AGENCY" target="_blank">
-        <img src="/MZ.png" alt="Manager MZ" class="contact-logo">
-      </a>
+    </a>
+    <a href="https://x.com/MZ_AGENCY" target="_blank" class="contact-card">
+      <img src="/MZ.png" alt="Manager MZ" class="contact-logo">
       <p>Mon manager</p>
-    </div>
+    </a>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Expérience</h2>
-  <ul>
-    <li>Coach depuis 2022</li>
-    <li>+200 joueurs coachés</li>
-    <li>Analyse VOD</li>
-    <li>Stratégies compétitives</li>
-  </ul>
+  <div class="experience-container">
+    <a href="https://x.com/Koyaesport_" target="_blank" class="experience-card">
+      <img src="/KOYA.png" alt="Team 1" class="experience-logo">
+      <p>Koya Esport</p>
+    </a>
+    <a href="https://x.com/Kaionewin1" target="_blank" class="experience-card">
+      <img src="/KAIONE.png" alt="Team 2" class="experience-logo">
+      <p>Kaione</p>
+    </a>
+    <a href="https://x.com/NBL_gg" target="_blank" class="experience-card">
+      <img src="/NEBULA.png" alt="Team 3" class="experience-logo">
+      <p>Nebula</p>
+    </a>
+    <a href="https://x.com/LynoXEU" target="_blank" class="experience-card">
+      <img src="/LYNOX.png" alt="Team 4" class="experience-logo">
+      <p>Lynox Esport</p>
+    </a>
+  </div>
 </section>
 
+<!-- COLLABORATION -->
 <section id="collaboration">
   <h2>Collaborations actuelles</h2>
   <ul>
@@ -61,6 +68,7 @@ app.innerHTML = `
   </ul>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>Coach Yushin</p>
   <p>
@@ -70,3 +78,16 @@ app.innerHTML = `
   </p>
 </footer>
 `;
+
+// ===== Animation au scroll =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.hero-container, .contact-card, .experience-card').forEach(el => {
+  observer.observe(el);
+});
