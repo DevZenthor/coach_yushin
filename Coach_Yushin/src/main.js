@@ -66,7 +66,7 @@ app.innerHTML = `
 
     <a href="https://x.com/Kaionewin1" class="experience-card">
       <img src="${kaioneLogo}">
-      <p>Kaione</p>
+      <p>Kaione Esport</p>
     </a>
 
     <a href="https://x.com/NBL_gg" class="experience-card">
@@ -76,7 +76,7 @@ app.innerHTML = `
 
     <a href="https://x.com/LynoXEU" class="experience-card">
       <img src="${lynoxLogo}">
-      <p>Lynox</p>
+      <p>Lynox Esport</p>
     </a>
   </div>
 </section>
