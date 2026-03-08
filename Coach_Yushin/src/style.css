@@ -1,5 +1,5 @@
 /* ========================================
-   BACKGROUND + CELTE
+   BACKGROUND
 ======================================== */
 
 body {
@@ -61,7 +61,7 @@ body {
 }
 
 /* ========================================
-   💎 NAVBAR FIX
+   NAVBAR FIX
 ======================================== */
 
 header {
@@ -223,7 +223,7 @@ section { padding: 180px 20px; text-align: center; }
 }
 
 /* ========================================
-   📱 RESPONSIVE MOBILE FIX
+   RESPONSIVE MOBILE FIX
 ======================================== */
 
 @media (max-width: 768px) {
